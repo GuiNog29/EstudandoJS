@@ -1,30 +1,26 @@
-function meuEscopo(){
-  const form = document.querySelector('.form');
-  const resultado = document.querySelector('.resultado');
+const form = document.querySelector('.form');
+const result = document.querySelector('.result');
 
-  const pessoas = [];
+const people = [];
 
-   function recebeEventoForm(evento){
-      evento.preventDefault();
+function getEventForm(event) {
+  event.preventDefault();
 
-      const nome = form.querySelector('.nome');
-      const sobrenome = form.querySelector('.sobrenome');
-      const peso = form.querySelector('.peso');
-      const altura = form.querySelector('.altura');
+  const name = form.querySelector('.name');
+  const surname = form.querySelector('.surname');
+  const weight = form.querySelector('.weight');
+  const height = form.querySelector('.height');
 
-      pessoas.push({
-        nome: nome.value,
-        sobrenome:sobrenome.value,
-        peso: peso.value,
-        altura: altura.value
-      });
+  people.push({
+    name: name.value,
+    surname: surname.value,
+    weight: weight.value,
+    height: height.value,
+  });
 
-      console.log(pessoas);
+  console.log(people);
 
-      resultado.innerHTML += `<p>${nome.value} ${sobrenome.value}  ${peso.value}  ${altura.value}</p>`;
-   }
-
-   form.addEventListener('submit', recebeEventoForm)
-
+  result.innerHTML += `<p>${name.value} ${surname.value}  ${weight.value}  ${height.value}</p>`;
 }
-meuEscopo();
+
+form.addEventListener('submit', getEventForm);

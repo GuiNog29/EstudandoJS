@@ -1,43 +1,43 @@
 const form = document.querySelector('.form');
-const resultado = document.querySelector('#resultado');
+const result = document.querySelector('#result');
 
-function calcularIMC(evento) {
-  evento.preventDefault();
-  resultado.classList.remove('bad');
+function calculateIMC(event) {
+  event.preventDefault();
+  result.classList.remove('bad');
 
-  let p = form.querySelector('.peso');
-  let a = form.querySelector('.altura');
-  const peso = p;
-  const altura = a;
+  let p = form.querySelector('.weight');
+  let a = form.querySelector('.height');
+  const weight = p;
+  const height = a;
 
-  if (!peso || peso >= 600) {
-    resultado.classList.add('bad');
-    resultado.innerHTML = `<p>Peso Inválido</p>`;
+  if (!weight || weight >= 600) {
+    result.classList.add('bad');
+    result.innerHTML = `<p>Weight Invalid</p>`;
     return;
   }
-  if (!altura || altura >= 2.5) {
-    resultado.classList.add('bad');
-    resultado.innerHTML = `<p>Altura Inválida</p>`;
+  if (!height || height >= 2.5) {
+    result.classList.add('bad');
+    result.innerHTML = `<p>Height Invalid</p>`;
     return;
   }
 
-  const imc = getIMC(peso.value, altura.value);
-  const nivelIMC = getNivelIMC(imc);
+  const imc = getIMC(weight.value, height.value);
+  const levelIMC = getLevelIMC(imc);
 
-  if (imc >= 25) resultado.classList.add('bad');
-  else resultado.classList.add('paragrafo-resultado');
+  if (imc >= 25) result.classList.add('bad');
+  else result.classList.add('paragraph-result');
 
-  resultado.innerHTML = `<p>Seu IMC é ${imc} (${nivelIMC})</p>`;
+  result.innerHTML = `<p>Your IMC is ${imc} (${levelIMC})</p>`;
 }
 
-function getNivelIMC(imc) {
+function getLevelIMC(imc) {
   const nivel = [
-    'Abaixo do peso',
-    'Peso normal',
-    'Sobre peso',
-    'Obesidade grau 1',
-    'Obesidade grau 2',
-    'Obesidade grau 3',
+    'Under weight',
+    'Normal weight',
+    'Overweight',
+    'Obesity grade 1',
+    'Obesity grade 2',
+    'Obesity grade 3',
   ];
 
   if (imc > 40) return nivel[5];
@@ -48,9 +48,9 @@ function getNivelIMC(imc) {
   if (imc < 18.5) return nivel[0];
 }
 
-function getIMC(peso, altura) {
-  const imc = peso / altura ** 2;
+function getIMC(weight, height) {
+  const imc = weight / height ** 2;
   return imc.toFixed(2);
 }
 
-form.addEventListener('submit', calcularIMC);
+form.addEventListener('submit', calculateIMC);

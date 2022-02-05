@@ -1,19 +1,19 @@
-const nome = prompt('Digite seu nome compadre:');
-document.body.innerHTML = `O seu nome é: <strong>${nome}<strong/> <br />`;
-document.body.innerHTML += `Seu nome tem <strong>${nome.length}<strong/> letras  <br />`;
-document.body.innerHTML += `A segunda letra do seu nome é: <strong>${nome[1]}<strong/>  <br />`;
-document.body.innerHTML += `Qual o primeiro índice da letra LETRA no seu nome? <strong>${nome.indexOf(
+const nome = prompt('Type your name:');
+document.body.innerHTML = `Your name is: <strong>${nome}<strong/> <br />`;
+document.body.innerHTML += `Your name has <strong>${nome.length}<strong/> letters  <br />`;
+document.body.innerHTML += `The second letter of your name is: <strong>${nome[1]}<strong/>  <br />`;
+document.body.innerHTML += `What is the first index of letter E in your name? <strong>${nome.indexOf(
   'e'
 )}<strong/>  <br />`;
-document.body.innerHTML += `Qual o último índice da letra LETRA no seu nome? <strong>${nome.lastIndexOf(
+document.body.innerHTML += `Whats is the last index of letter E in your name? <strong>${nome.lastIndexOf(
   'e'
 )}<strong/>  <br />`;
-document.body.innerHTML += `As últimas 3 letras do seu nome são: <strong>${nome.slice(
+document.body.innerHTML += `The last 3 letters of your name are: <strong>${nome.slice(
   -3,
   nome.length
 )}<strong/>  <br />`;
-document.body.innerHTML += `As palavras do seu nome são: <strong>${nome.split(
+document.body.innerHTML += `The words of your name are: <strong>${nome.split(
   ' '
 )}<strong/>  <br />`;
-document.body.innerHTML += `Seu nome com letras maiúsculas: <strong>${nome.toUpperCase()}<strong/>  <br />`;
-document.body.innerHTML += `Seu nome com letras minúsculas: <strong>${nome.toLowerCase()}<strong/>  <br />`;
+document.body.innerHTML += `Your name in capital letters: <strong>${nome.toUpperCase()}<strong/>  <br />`;
+document.body.innerHTML += `Your name in lowercase: <strong>${nome.toLowerCase()}<strong/>  <br />`;
