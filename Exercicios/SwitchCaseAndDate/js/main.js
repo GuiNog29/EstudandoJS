@@ -2,21 +2,19 @@ const result = document.querySelector('.result');
 
 function getDate() {
   let dayOfWeekText = '';
-  const getDate = new Date();
-  const dayOfMonth = puttingZeroToLeft(getDate.getDate());
-  const year = puttingZeroToLeft(getDate.getFullYear());
-  const hours = puttingZeroToLeft(getDate.getHours());
-  const minutes = puttingZeroToLeft(getDate.getMinutes());
-  const month = getDate.getMonth();
-  const dayOfWeek = getDate.getDay();
+  const date = new Date();
+  const dayOfMonth = puttingZeroToLeft(date.getDate());
+  const hours = puttingZeroToLeft(date.getHours());
+  const minutes = puttingZeroToLeft(date.getMinutes());
+  const dayOfWeek = date.getDay();
+  const month = date.getMonth();
+  const year = date.getFullYear();
 
-  const dateFormated = (result.innerHTML = `${getDayOfWeekText(
+  return (result.innerHTML = `${getDayOfWeekText(
     dayOfWeek
   )}, ${getMonthOfYearText(
     month
   )} ${dayOfMonth}th, ${year} ${hours}:${minutes}`);
-
-  return dateFormated;
 }
 
 function getDayOfWeekText(day) {
