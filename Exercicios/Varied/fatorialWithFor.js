@@ -1,7 +1,7 @@
-let number = 3;
+let number = 5;
 let factorial = 1;
 
 for (let i = number; i >= 1; i--){
-  factorial = factorial * i;
+  factorial *= i;
 }
 console.log(`The factorial of ${number} is ${factorial}`);

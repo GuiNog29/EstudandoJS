@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools",
+    "bmewburn.vscode-intelephense-client"
+  ]
+}
