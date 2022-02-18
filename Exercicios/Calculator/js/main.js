@@ -65,6 +65,7 @@ function createCalculator() {
 
     btnForDisplay(value) {
       this.display.value += value;
+      this.display.focus();
     },
   };
 }
