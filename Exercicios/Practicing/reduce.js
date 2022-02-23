@@ -1,25 +1,25 @@
 const numbers = [1, 2, 3, 10, 10, 10, 10];
 
-// const total = numbers.reduce((accumulator, value) => {
-//   accumulator += value;
-//   return accumulator;
-// }, 0);
+const total = numbers.reduce((accumulator, value) => {
+  accumulator += value;
+  return accumulator;
+}, 0);
 
-// console.log(total);
+console.log(total);
 
-// const pairNumbers = numbers.reduce((accumulator, value) => {
-//   if (value % 2 === 0) accumulator.push(value);
-//   return accumulator;
-// }, []);
+const pairNumbers = numbers.reduce((accumulator, value) => {
+  if (value % 2 === 0) accumulator.push(value);
+  return accumulator;
+}, []);
 
-// console.log(pairNumbers);
+console.log(pairNumbers);
 
-// const doubleValues = numbers.reduce((accumulator, value) => {
-//   accumulator.push(value * 2);
-//   return accumulator;
-// }, []);
+const doubleValues = numbers.reduce((accumulator, value) => {
+  accumulator.push(value * 2);
+  return accumulator;
+}, []);
 
-// console.log(doubleValues);
+console.log(doubleValues);
 
 const people = [
   { name: 'Luis', age: 62 },
