@@ -3,7 +3,7 @@ function People(name, lastName) {
   this.lastName = lastName;
 }
 
-People.prototype.fullName = function () {
+People.prototype.fullName = () => {
   return `My full name is ${this.name} ${this.lastName}`;
 };
 
