@@ -14,28 +14,29 @@
         <li>No fild can be empty</li>
         <li>User can only contain letter and/or numbers</li>
         <li>User must be between 3 and 12 characters</li>
-        <li>Password must be between 6 and characters</li>
+        <li>Password must be between 6 and 12 characters</li>
       </ul>
 
-      <form action="" class="form">
-        <label>Name:</label>
-        <input type="text" class="name" />
-        <label>Last Name:</label>
-        <input type="text" class="last-name" />
-        <label>CPF:</label>
-        <input type="text" class="cpf" />
-        <label>User:</label>
-        <input type="text" class="user" />
-        <label>Password:</label>
-        <input type="text" class="password" />
-        <label>Repeat Password:</label>
-        <input type="text" class="repeat-password" />
+      <form action="/" class="form" method="POST">
+        <label>Name</label>
+        <input type="text" class="name validate" />
+        <label>Last Name</label>
+        <input type="text" class="last-name validate" />
+        <label>CPF</label>
+        <input type="text" class="cpf validate" />
+        <label>User</label>
+        <input type="text" class="user validate" />
+        <label>Password</label>
+        <input type="password" class="password validate" />
+        <label>Repeat Password</label>
+        <input type="password" class="repeat-password validate" />
 
         <button type="submit">Send</button>
 
         <div class="error"></div>
       </form>
     </section>
+    <script src="./js/ValidatingCPF.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
