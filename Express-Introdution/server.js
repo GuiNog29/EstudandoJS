@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
   res.send(`
   <form action="/" method="POST">
   Name: <input type="text" name="name">
-  <button>Send</button>
+  <button>Send Form</button>
   </form>
   `);
 });
