@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
-const homeController = require('./controllers/homeController');
-const contactController = require('./controllers/contactController');
+const homeController = require('./src/controllers/homeController');
+const contactController = require('./src/controllers/contactController');
 
 // Routes of home
 route.get('/', homeController.initialPage);
