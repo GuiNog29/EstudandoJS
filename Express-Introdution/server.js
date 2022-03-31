@@ -1,6 +1,11 @@
 const express = require('express');
-const res = require('express/lib/response');
 const app = express();
+
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 app.get('/', (req, res) => {
   res.send(`
@@ -11,12 +16,14 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.post('/', (req, res) => {
-  res.send('I received the form')
-})
+app.get('/tests/:userId', (req, res) => {
+  console.log(req.params);
+  res.send(req.params);
+});
 
-app.get('/contact', (req, res) => {
-  res.send('Thanks you for contacting us');
+app.post('/', (req, res) => {
+  console.log(req.body);
+  res.send(`You send: ${req.body.name}`);
 });
 
 app.listen(3000, () => {
