@@ -1,7 +1,7 @@
 exports.initialPage = (req, res) => {
-  res.render('index')
+  res.render('index');
 };
 
 exports.treatPost = (req, res) => {
-  res.send('aoba')
-}
+  res.send('aoba');
+};
