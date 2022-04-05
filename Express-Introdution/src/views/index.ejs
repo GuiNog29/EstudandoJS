@@ -4,6 +4,7 @@
   <h1>Lorem</h1>
 
   <form action="/" method="post">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>"> 
     <label>Client</label>
     <input type="text" name="client" />
     <button>Submit</button>
