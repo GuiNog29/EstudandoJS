@@ -19,6 +19,7 @@ const path = require('path');
 const helmet = require('helmet');
 const csurf = require('csurf');
 const {
+  globalMiddleware,
   checkCsurfError,
   csrfMiddleware,
 } = require('./src/middlewares/middleware');
@@ -45,6 +46,7 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
 app.use(csurf());
+app.use(globalMiddleware);
 app.use(checkCsurfError);
 app.use(csrfMiddleware);
 app.use(routes);
